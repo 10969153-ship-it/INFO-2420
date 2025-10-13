@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<meta charset="UTF-8">
+	
+<title>HTML Practice 6 - Tables</title>
+
+<style type="text/css">
+@font-face {
+  font-family: 'orange1';
+  src: url('fonts/orange1.eot');
+  src: local('orange1'),
+       url('fonts/orange1.ttf') format('truetype');
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+}
+table, th, td {
+  border: 5px solid black;
+  border-collapse: separate;
+  border-spacing: 10px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+caption {
+  font-family: orange1;
+  color: #1d2f20;
+  font-weight: bold;
+  background-color: #D7E7D0;
+  border-radius: 10px;
+  border: 2px solid #1d2f20;
+  height: 40px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.courses   { background-color: #ccc;
+             width: 25%; }
+th.days    { background-color: #99ff66;
+             width: 15%; }
+            
+td         { color: 1def20;
+             background-color: #ccffcc;
+             font-size: 20px; 
+             
+           }
+th  {border: 3px solid #1d2f20;
+     padding: 5px;
+     border-radius: 5px;
+     font-size: 20px;
+    
+    }
+
+</style>
+</head>
+<body>
+<div >
+   <table >
+	 <caption>My Class Schedule</caption>
+        <colgroup class="courses"></colgroup>
+        <colgroup class="days"></colgroup>
+        <tr>
+        <th>Courses</th>
+        <th class="days">Monday</th>
+        <th class="days">Tuesday</th>
+        <th class="days">Wednesday</th>
+        <th class="days">Thursday</th>
+        <th class="days">Friday</th>
+
+        </tr>
+        <tr>
+            <th>INFO 1200<br>Introduction to Programming</th>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+      </tr>
+      <tr>
+        <th>INFO 2410<br>Database Fundamentals</th>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+      </tr>
+      <tr>
+        <th>INFO 2420<br>Web Application Design</th>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+      </tr>
+      <tr>
+        <th>IT 1600<br>Computer Hardware</th>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+      </tr>
+      <tr>
+        <th>IT 2600<br>Data Communications & Networking</th>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+        <td>Online</td>
+      </tr>
+      <tr>
+   </table>
+</div>
+
+
+
+</body>
+</html>
+
