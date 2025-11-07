@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Utah Backyard Birds – Graphics</title>
+  <meta name="viewport" content="width=900, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Kalam:700|Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9f9f1;
+      color: #222;
+      font-family: 'Kalam', 'Indie Flower', Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+    #main-content {
+      width: 950px;
+      margin: 32px auto 0 auto;
+      padding: 24px 32px 40px 32px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 0 18px #b9ccad55;
+      border: 1px solid #ddd;
+    }
+    .banner {
+      display: block;
+      width: 100%;
+      max-width: 375px;
+      height: 48px;
+      object-fit: cover;
+      margin: 0 auto 12px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #b9ccad33;
+    }
+    .logo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .logo-main {
+      max-width: 70px;
+      margin-bottom: 2px;
+    }
+    .logo-caption {
+      font-size: 0.9em;
+      color: #b49a53;
+      letter-spacing: .06em;
+      font-family: 'Indie Flower', cursive, Arial, sans-serif;
+      margin-top: 1px;
+      margin-bottom: 4px;
+    }
+    h1 {
+      color: #275D58;
+      font-size: 1.2em;
+      text-shadow: 0 .09em .10em #96cebc80;
+      margin-bottom: 10px;
+      letter-spacing: .04em;
+      font-family: 'Kalam', serif;
+      text-align: center;
+    }
+    .topnav {
+      text-align: center;
+      font-size: 1.05em;
+      margin-bottom: 12px;
+    }
+    .topnav a {
+      color: #c5b441;
+      text-decoration: none;
+      padding: 0 14px;
+      font-family: 'Indie Flower', cursive;
+      letter-spacing: .08em;
+      font-size: 1.08em;
+      transition: color 0.2s;
+    }
+    .topnav a:hover {
+      color: #79a43e;
+      text-decoration: underline;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 12px;
+    }
+    .controls img {
+      vertical-align: middle;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px #bbb;
+      border: 1px solid #e4e6dc;
+      transition: box-shadow .2s;
+    }
+    .controls img:hover {
+      box-shadow: 0 3px 16px #79a43e40;
+      border-color: #b9ccad;
+    }
+    #thumbs {
+      width: 96%;
+      margin: 18px auto 6px auto;
+      text-align: center;
+      background: #f5fff8;
+      padding: 16px 0 8px 0;
+      border-radius: 14px 14px 0 0;
+      border: 1.2px solid #d2e6db;
+      box-shadow: 0 0 7px #c5d9ce13;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+    }
+    .thumbbox {
+      background: #eaf7f0;
+      border: 1.5px solid #b0d2cd;
+      border-radius: 9px;
+      padding: 7px;
+      width: 128px;
+      height: 104px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: box-shadow 0.17s, border-color 0.15s;
+    }
+    .thumbbox:hover, .thumbbox.active {
+      box-shadow: 0 3px 13px #76a48e6a;
+      border-color: #579C7B;
+      background: #e2faeb;
+    }
+    .thumbbox img {
+      width: 110px;
+      height: 68px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1.4px solid #82B89E;
+      margin-bottom: 3px;
+      background: #fff;
+    }
+    .thumb-label {
+      font-size: 0.89em;
+      color: #175d5d;
+      font-family: 'Indie Flower', cursive, Arial, sans-serif;
+      margin-top: 0;
+      text-align: center;
+    }
+    #image {
+      width: 96%;
+      text-align: center;
+      min-height: 290px;
+      background: #eaf7f0;
+      padding: 12px 0 22px 0;
+      border-radius: 0 0 14px 14px;
+      border: 1.2px solid #d2e6db;
+      margin-bottom: 7px;
+      box-shadow: 0 2px 13px #c5d9ce13;
+    }
+    #image img {
+      width: 340px;
+      max-width: 88vw;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px #9eafae19;
+      border: 1.7px solid #b0d2cd;
+      margin-bottom: 7px;
+      background: #fff;
+    }
+    #bottomText {
+      font-size: 1.09em;
+      color: #275D58;
+      margin-top: 5px;
+      font-weight: bold;
+      font-family: 'Kalam', serif;
+      letter-spacing: .05em;
+    }
+    .instructions {
+      font-style: italic;
+      color: #579C7B;
+      text-align: center;
+      background: #f5fff8;
+      margin: 19px auto 6px auto;
+      padding: 11px 2px 8px 2px;
+      border-radius: 10px;
+      width: 83%;
+      border: 1px solid #c2e3d6;
+      font-size: 1.02em;
+    }
+  </style>
+  <script type="text/javascript">
+    var imgArray = [
+      {large: 'BaldEagleLg.jpg', thumb: 'BaldEagleSm.jpg', label: 'Bald Eagle'},
+      {large: 'HeronLg.jpg', thumb: 'HeronSm.jpg', label: 'Heron'},
+      {large: 'Hummingbird3.jpg', thumb: 'HummingbirdSm.jpg', label: 'Hummingbird'},
+      {large: 'StorkLg.jpg', thumb: 'StorkSm.jpg', label: 'Stork'}
+    ];
+    var imgPath = "Birds/";
+    function swapImage(imgID) {
+      var theImage = document.getElementById('theImage');
+      var textDiv = document.getElementById('bottomText');
+      theImage.src = imgPath + imgArray[imgID].large;
+      textDiv.textContent = imgArray[imgID].label;
+      // highlight the active thumb
+      var thumbBoxes = document.querySelectorAll('.thumbbox');
+      for (var i=0; i<thumbBoxes.length; i++) thumbBoxes[i].classList.remove('active');
+      if(thumbBoxes[imgID]) thumbBoxes[imgID].classList.add('active');
+    }
+    function preloadImages() {
+      for(var i = 0; i < imgArray.length; i++) {
+        var tmpImg = new Image();
+        tmpImg.src = imgPath + imgArray[i].large;
+      }
+    }
+    window.onload = function() {
+      preloadImages();
+      swapImage(0); // show first image by default
+      // add hover event to each thumbnail box
+      var thumbBoxes = document.querySelectorAll('.thumbbox');
+      for (var i = 0; i < thumbBoxes.length; i++) {
+        (function(idx) {
+          thumbBoxes[idx].onmouseover = function() { swapImage(idx); };
+        })(i);
+        // Remove onclick for hover-only
+        thumbBoxes[i].onclick = null;
+      }
+    };
+  </script>
+</head>
+<body>
+<div id="main-content">
+  <img src="Images/banner-utahbirds.png" alt="Utah Backyard Birds Banner" class="banner">
+  <div class="logo-block">
+    <img src="Images/logo-utahbirds.png" alt="Utah Backyard Birds Logo" class="logo-main">
+    <span class="logo-caption">Local Avian Wonders</span>
+  </div>
+  <h1>Utah Backyard Birds – Graphics Page</h1>
+  <div class="topnav">
+    <a href="#about">About Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#press">Press</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="controls">
+    <a href="#"
+       onmouseover="document.getElementById('print').src='Birds/Print2.jpg';"
+       onmouseout="document.getElementById('print').src='Birds/Print1.jpg';">
+      <img src="Birds/Print1.jpg" alt="Print Page" width="120" height="36" id="print">
+    </a>
+  </div>
+  <div id="thumbs">
+    <div class="thumbbox">
+      <img src="Birds/BaldEagleSm.jpg" alt="Bald Eagle thumbnail" />
+      <div class="thumb-label">Bald Eagle</div>
+    </div>
+    <div class="thumbbox">
+      <img src="Birds/HeronSm.jpg" alt="Heron thumbnail" />
+      <div class="thumb-label">Heron</div>
+    </div>
+    <div class="thumbbox">
+      <img src="Birds/HummingbirdSm.jpg" alt="Hummingbird thumbnail" />
+      <div class="thumb-label">Hummingbird</div>
+    </div>
+    <div class="thumbbox">
+      <img src="Birds/StorkSm.jpg" alt="Stork thumbnail" />
+      <div class="thumb-label">Stork</div>
+    </div>
+  </div>
+  <div id="image">
+    <img id="theImage" src="" alt="Large Bird" />
+    <div id="bottomText"></div>
+  </div>
+  <div class="instructions">
+    Banner, logo, and "Local Avian Wonders" are at the top. <b>Hover over any thumbnail</b> to pop up the large bird image. Enjoy!
+</div>
+</body>
+</html>
+
