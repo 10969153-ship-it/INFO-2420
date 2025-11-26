@@ -40,6 +40,10 @@
     .logo-main {
       max-width: 70px;
       margin-bottom: 2px;
+      transition: transform 0.2s;
+    }
+    .logo-main:hover {
+      transform: scale(1.05);
     }
     .logo-caption {
       font-size: 0.9em;
@@ -153,8 +157,9 @@
       box-shadow: 0 2px 13px #c5d9ce13;
     }
     #image img {
-      width: 340px;
-      max-width: 88vw;
+      max-width: 400px;
+      max-height: 267px;
+      width: auto;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 20px #9eafae19;
@@ -182,92 +187,133 @@
       border: 1px solid #c2e3d6;
       font-size: 1.02em;
     }
+    .background-demo {
+      text-align: center;
+      margin: 20px auto;
+    }
+    .background-demo img {
+      max-width: 900px;
+      width: 100%;
+      height: auto;
+      border: 2px solid #d2e6db;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .bg-label {
+      font-size: 0.95em;
+      color: #666;
+      margin-top: 8px;
+      font-style: italic;
+    }
   </style>
-  <script type="text/javascript">
-    var imgArray = [
-      {large: 'BaldEagleLg.jpg', thumb: 'BaldEagleSm.jpg', label: 'Bald Eagle'},
-      {large: 'HeronLg.jpg', thumb: 'HeronSm.jpg', label: 'Heron'},
-      {large: 'Hummingbird3.jpg', thumb: 'HummingbirdSm.jpg', label: 'Hummingbird'},
-      {large: 'StorkLg.jpg', thumb: 'StorkSm.jpg', label: 'Stork'}
-    ];
-    var imgPath = "Birds/";
-    function swapImage(imgID) {
-      var theImage = document.getElementById('theImage');
-      var textDiv = document.getElementById('bottomText');
-      theImage.src = imgPath + imgArray[imgID].large;
-      textDiv.textContent = imgArray[imgID].label;
-      // highlight the active thumb
-      var thumbBoxes = document.querySelectorAll('.thumbbox');
-      for (var i=0; i<thumbBoxes.length; i++) thumbBoxes[i].classList.remove('active');
-      if(thumbBoxes[imgID]) thumbBoxes[imgID].classList.add('active');
-    }
-    function preloadImages() {
-      for(var i = 0; i < imgArray.length; i++) {
-        var tmpImg = new Image();
-        tmpImg.src = imgPath + imgArray[i].large;
-      }
-    }
-    window.onload = function() {
-      preloadImages();
-      swapImage(0); // show first image by default
-      // add hover event to each thumbnail box
-      var thumbBoxes = document.querySelectorAll('.thumbbox');
-      for (var i = 0; i < thumbBoxes.length; i++) {
-        (function(idx) {
-          thumbBoxes[idx].onmouseover = function() { swapImage(idx); };
-        })(i);
-        // Remove onclick for hover-only
-        thumbBoxes[i].onclick = null;
-      }
-    };
-  </script>
 </head>
 <body>
 <div id="main-content">
+  <!-- Banner -->
   <img src="Images/banner-utahbirds.png" alt="Utah Backyard Birds Banner" class="banner">
+  
+  <!-- Logo Rollover -->
   <div class="logo-block">
-    <img src="Images/logo-utahbirds.png" alt="Utah Backyard Birds Logo" class="logo-main">
+    <a href="#"
+       onmouseover="document.getElementById('logo').src='Images/logo-utahbirds2.png';"
+       onmouseout="document.getElementById('logo').src='Images/logo-utahbirds.png';">
+      <img src="Images/logo-utahbirds.png" alt="Utah Backyard Birds Logo" class="logo-main" id="logo">
+    </a>
     <span class="logo-caption">Local Avian Wonders</span>
   </div>
+  
   <h1>Utah Backyard Birds – Graphics Page</h1>
+  
   <div class="topnav">
     <a href="#about">About Us</a>
     <a href="#gallery">Gallery</a>
     <a href="#press">Press</a>
     <a href="#contact">Contact</a>
   </div>
+  
+  <!-- Print Button Rollover -->
   <div class="controls">
     <a href="#"
-       onmouseover="document.getElementById('print').src='Birds/Print2.jpg';"
-       onmouseout="document.getElementById('print').src='Birds/Print1.jpg';">
-      <img src="Birds/Print1.jpg" alt="Print Page" width="120" height="36" id="print">
+       onmouseover="document.getElementById('print').src='Images/Print2.png';"
+       onmouseout="document.getElementById('print').src='Images/Print1.png';">
+      <img src="Images/Print1.png" alt="Print Page" width="200" height="50" id="print">
     </a>
   </div>
+  
+  <!-- Thumbnail Image Swap Section -->
   <div id="thumbs">
-    <div class="thumbbox">
-      <img src="Birds/BaldEagleSm.jpg" alt="Bald Eagle thumbnail" />
+    <div class="thumbbox" onmouseover="swapImage(0)">
+      <img src="Birds/BaldEagleLg.jpg" alt="Bald Eagle thumbnail" />
       <div class="thumb-label">Bald Eagle</div>
     </div>
-    <div class="thumbbox">
-      <img src="Birds/HeronSm.jpg" alt="Heron thumbnail" />
-      <div class="thumb-label">Heron</div>
+    <div class="thumbbox" onmouseover="swapImage(1)">
+      <img src="Birds/HeronLg.jpg" alt="Heron thumbnail" />
+      <div class="thumb-label">Great Blue Heron</div>
     </div>
-    <div class="thumbbox">
-      <img src="Birds/HummingbirdSm.jpg" alt="Hummingbird thumbnail" />
+    <div class="thumbbox" onmouseover="swapImage(2)">
+      <img src="Birds/Hummingbird3.jpg" alt="Hummingbird thumbnail" />
       <div class="thumb-label">Hummingbird</div>
     </div>
-    <div class="thumbbox">
-      <img src="Birds/StorkSm.jpg" alt="Stork thumbnail" />
-      <div class="thumb-label">Stork</div>
+    <div class="thumbbox" onmouseover="swapImage(3)">
+      <img src="Birds/StorkLg.jpg" alt="Stork thumbnail" />
+      <div class="thumb-label">White Stork</div>
     </div>
   </div>
+  
   <div id="image">
-    <img id="theImage" src="" alt="Large Bird" />
-    <div id="bottomText"></div>
+    <img id="theImage" src="Birds/BaldEagleLg.jpg" alt="Large Bird" />
+    <div id="bottomText">Bald Eagle</div>
   </div>
+  
   <div class="instructions">
-    Banner, logo, and "Local Avian Wonders" are at the top. <b>Hover over any thumbnail</b> to pop up the large bird image. Enjoy!
+    Banner, logo, and "Local Avian Wonders" are at the top. <b>Hover over any thumbnail</b> to swap the large bird image. The Print button and logo both have rollover effects!
+  </div>
+  
+  <!-- Two-Column Background Display -->
+  <div class="background-demo">
+    <img src="Images/2colback.png" alt="Two-Column Background for Project 7">
+    <div class="bg-label"></div>
+  </div>
 </div>
+
+<script type="text/javascript">
+  // Image array
+  var imgArray = [
+    {large: 'Birds/BaldEagleLg.jpg', label: 'Bald Eagle'},
+    {large: 'Birds/HeronLg.jpg', label: 'Great Blue Heron'},
+    {large: 'Birds/Hummingbird3.jpg', label: 'Hummingbird'},
+    {large: 'Birds/StorkLg.jpg', label: 'White Stork'}
+  ];
+  
+  function swapImage(imgID) {
+    var theImage = document.getElementById('theImage');
+    var textDiv = document.getElementById('bottomText');
+    
+    theImage.src = imgArray[imgID].large;
+    theImage.alt = imgArray[imgID].label;
+    textDiv.textContent = imgArray[imgID].label;
+    
+    // Highlight active thumbnail
+    var thumbBoxes = document.querySelectorAll('.thumbbox');
+    for (var i = 0; i < thumbBoxes.length; i++) {
+      thumbBoxes[i].classList.remove('active');
+    }
+    thumbBoxes[imgID].classList.add('active');
+  }
+  
+  // Preload images on page load
+  function preloadImages() {
+    for(var i = 0; i < imgArray.length; i++) {
+      var tmpImg = new Image();
+      tmpImg.src = imgArray[i].large;
+    }
+  }
+  
+  // Run when page loads
+  window.onload = function() {
+    preloadImages();
+    swapImage(0); // Show first image
+  };
+</script>
 </body>
 </html>
-
