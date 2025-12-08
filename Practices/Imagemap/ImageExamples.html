@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Map Example</title>
+  <style type="text/css">
+    body {
+      background-color: #FFFFCC;
+      font-size: large;
+      color: #000000;
+    }
+    br {
+      clear: all;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Image Experimentation</h2>
+
+  <p>
+    Expression Web allows the web designer to easily add formatting changes to an image.
+    Just be careful that you don't accidentally overwrite your original image.
+  </p>
+
+  <h2>Image Map Example</h2>
+
+  <!-- MAIN IMAGE FOR THE MAP -->
+  <img src="Images/map.gif"
+       alt="Image map with circle, rectangle, and star shapes"
+       id="Map"
+       usemap="#shapesMap">
+
+  <!-- IMAGE MAP DEFINITION -->
+  <map name="shapesMap" id="shapesMap">
+    <!-- Circle hotspot: red circle on left -->
+    <area shape="circle"
+          coords="75,115,35"
+          href="circle.html"
+          alt="link to circle.html">
+
+    <!-- Rectangle hotspot: green square on top right -->
+    <area shape="rect"
+          coords="145,80,200,135"
+          href="rectangle.html"
+          alt="link to rectangle.html">
+
+    <!-- Polygon/Star hotspot: blue star on bottom -->
+    <area shape="poly"
+          coords="138,165,145,190,168,195,151,210,157,235,138,220,119,235,125,210,108,195,131,190"
+          href="polygon.html"
+          alt="link to polygon.html">
+  </map>
+
+</body>
+</html>
