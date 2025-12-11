@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Utah Backyard Birds – Home</title>
+  <meta name="viewport" content="width=900, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Kalam:700|Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mystyles.css">
+  <script type="text/javascript" src="myscripts.js"></script>
+</head>
+
+<body onload="preloadImages(); swapImage(0);">
+
+  <header>
+    <!-- Banner -->
+    <img src="Images/banner-utahbirds.png"
+         alt="Utah Backyard Birds Banner"
+         class="banner">
+
+    <!-- Logo rollover -->
+    <a href="#"
+       onmouseover="document.getElementById('logo').src='Images/logo-utahbirds2.png';"
+       onmouseout="document.getElementById('logo').src='Images/logo-utahbirds.png';">
+      <img src="Images/logo-utahbirds.png"
+           alt="Utah Backyard Birds Logo"
+           id="logo"
+           class="logo-left">
+    </a>
+
+    <!-- Top navigation inside header -->
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="../Project3/AboutUs.html">About Us</a>
+      <a href="../Project3/Tributes.html">Tributes</a>
+      <a href="Survey.html">Survey</a>
+      <a href="Favorites.html">Favorites</a>
+    </nav>
+  </header>
+
+  <section>
+    <article>
+      <!-- Main heading and welcome text -->
+      <h1>Welcome to Utah Backyard Birds</h1>
+
+      <!-- Replace this paragraph with your BirdsWelcome text -->
+    <p>Welcome to Backyard Birds of Utah!</p>
+<p>If you love birdwatching like we do, you should enjoy looking around this site.</p>
+<p>Take a look at our Bird Profiles and take the opportunity to complete our survey.</p>
+
+
+      <!-- Gallery heading -->
+      <h2>Featured Backyard Visitors</h2>
+
+      <!-- Thumbnails row -->
+      <div id="thumbs">
+        <div class="thumbbox" onmouseover="swapImage(0);">
+          <img src="Images/BaldEagleSm.jpg" alt="Bald Eagle thumbnail">
+          <div class="thumb-label">Bald Eagle</div>
+        </div>
+        <div class="thumbbox" onmouseover="swapImage(1);">
+          <img src="Images/HeronSm.jpg" alt="Great Blue Heron thumbnail">
+          <div class="thumb-label">Great Blue Heron</div>
+        </div>
+        <div class="thumbbox" onmouseover="swapImage(2);">
+          <img src="Images/Hummingbird.jpg" alt="Hummingbird thumbnail">
+          <div class="thumb-label">Hummingbird</div>
+        </div>
+        <div class="thumbbox" onmouseover="swapImage(3);">
+          <img src="Images/StorkSmall.jpg" alt="White Stork thumbnail">
+          <div class="thumb-label">White Stork</div>
+        </div>
+      </div>
+
+      <!-- Full‑size image area -->
+      <div id="image">
+        <img id="theImage" src="Images/BaldEagleSm.jpg" alt="Large Bird">
+        <div id="bottomText">Bald Eagle</div>
+      </div>
+
+      <!-- Mini‑tribute area -->
+      <h2>What Customers Are Saying</h2>
+
+      <div class="mini-tribute">
+        <img src="Images/iStockGeeseSm.jpg"
+             alt="Flock of geese over lake"
+             class="mini-tribute-img">
+
+        <div class="mini-tribute-text">
+          <h3>"Brightens Up My Workplace – David Jorgenson"</h3>
+          <p>
+            Dave Jorgensen enjoys having a Utah Backyard Birds calendar in his office
+            to bring the colors and variety of local birds into his workday. The vivid
+            photography reminds him of the wildlife found across Utah all year long...
+            <a href="../Project3/Tributes.html">more &gt;&gt;</a>
+          </p>
+        </div>
+      </div>
+
+    </article>
+  </section>
+
+  <footer>
+    <p>
+      Webmaster:
+      <a href="mailto:youremail@example.com">youremail@example.com</a>
+    </p>
+    <p>This web site has been created solely for educational purposes.</p>
+  </footer>
+
+</body>
+</html>

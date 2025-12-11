@@ -1,0 +1,245 @@
+/* Base page */
+body {
+  background-color: #f8f8ec;  /* light neutral */
+  color: #222;
+  font-family: 'Kalam', 'Indie Flower', Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Top-level containers */
+header,
+section,
+footer {
+  width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #5f9f8a; /* main green */
+  padding: 0 18px 16px 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Banner – full width, show whole image */
+header .banner {
+  display: block;
+  width: 100%;        /* span header width (900px) */
+  max-width: 950px;
+  height: 175px;      /* fixed strip height */
+  margin: 0 auto 6px auto;
+  border-radius: 0;
+  object-fit: cover;  /* crop top/bottom slightly to fit height */
+  object-position: center; /* keep text centered */
+}
+
+
+
+/* Logo left */
+.logo-left {
+  float: left;
+  margin-top: 10px;
+  margin-right: 16px;
+  width: 80px;
+  height: auto;
+}
+
+/* Nav right */
+header nav {
+  float: right;
+  width: 30%;
+  text-align: right;
+  margin-top: 18px;
+}
+
+/* Nav buttons */
+header nav a {
+  display: block;
+  margin-bottom: 6px;
+  padding: 8px 10px;
+  background-color: #b6c34b;   /* muted yellow‑green */
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive, Arial, sans-serif;
+  font-size: 1.03em;
+  border-radius: 6px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+header nav a:hover {
+  background-color: #7ea33e;
+}
+
+/* Main section */
+section {
+  background-color: #e4f1eb;   /* soft light green */
+  padding: 18px 0 22px 0;
+}
+
+/* Article card */
+article {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 18px 22px 26px 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+h1 {
+  color: #275D58;
+  font: bold 2.2em 'Kalam', serif;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+h2 {
+  color: #275D58;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+
+h3 {
+  color: #275D58;
+  margin-top: 0;
+}
+
+/* Paragraphs */
+article p {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 0.98em;
+}
+
+/* Thumbnail bar */
+#thumbs {
+  width: 100%;
+  margin: 14px auto 8px auto;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  background-color: #f5fff8;
+  padding: 12px 0;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #d2e6db;
+}
+
+/* Thumbnail boxes */
+.thumbbox {
+  background: #eaf7f0;
+  border: 1px solid #b0d2cd;
+  border-radius: 8px;
+  padding: 6px;
+  width: 125px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 0.17s, border-color 0.15s, background 0.15s;
+}
+
+.thumbbox:hover,
+.thumbbox.active {
+  box-shadow: 0 3px 10px rgba(118,164,142,0.35);
+  border-color: #579C7B;
+  background: #e2faeb;
+}
+
+.thumbbox img {
+  width: 110px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #82B89E;
+  background: #fff;
+}
+
+.thumb-label {
+  font-size: 0.9em;
+  color: #175d5d;
+  margin-top: 4px;
+}
+
+/* Large image area */
+#image {
+  width: 100%;
+  text-align: center;
+  background: #eaf7f0;
+  padding: 14px 0 18px 0;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #d2e6db;
+  margin-bottom: 18px;
+}
+
+#image img {
+  max-width: 420px;
+  max-height: 270px;
+  border-radius: 10px;
+  border: 1px solid #b0d2cd;
+  background: #fff;
+}
+
+#bottomText {
+  font-size: 1.03em;
+  color: #275D58;
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+/* Mini-tribute */
+.mini-tribute {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f5fff8;
+  border: 1px solid #c2e3d6;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.mini-tribute-img {
+  width: 180px;
+  height: auto;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.mini-tribute-text p {
+  margin-top: 4px;
+}
+
+.mini-tribute-text a {
+  color: #b6c34b;
+  text-decoration: none;
+}
+
+.mini-tribute-text a:hover {
+  color: #7ea33e;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #275D58;
+  color: #ffffff;
+  padding: 12px 15px 16px 15px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+footer a {
+  color: #b6c34b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #d8df7a;
+  text-decoration: underline;
+}
