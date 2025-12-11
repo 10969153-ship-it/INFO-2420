@@ -1,0 +1,39 @@
+/* Print stylesheet for Project 8 */
+
+body {
+    background: #ffffff;
+    color: #000000;
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+}
+
+/* Make layout full width on paper */
+header,
+section {
+    width: 100%;
+    margin: 0;
+}
+
+/* Hide navigation and footer */
+nav {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+/* Let article take most of the page, no floats */
+article {
+    width: 95%;
+    margin: 0 auto;
+    float: none;
+}
+
+/* Optional: remove background images that waste ink */
+body,
+section {
+    background-image: none;
+}
+
+
