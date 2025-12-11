@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>Sample Page</title>
+    <!-- TemplateEndEditable -->
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+
+<header>
+    <img src="Images/blue2planebanner.gif" alt="Country Creations Banner">
+    <img src="Images/cclogo.gif" alt="Country Creations Logo" class="logoleft">
+</header>
+
+<section>
+    <nav>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="AboutUs.html">About Us</a></p>
+        <p><a href="Tributes.html">Tributes</a></p>
+    </nav>
+
+    <!-- TemplateBeginEditable name="PageContent" -->
+    <article>
+        <h2>Sample Page</h2>
+        <p>Replace this sample content in each page that uses the template.</p>
+    </article>
+    <!-- TemplateEndEditable -->
+</section>
+
+<footer>
+    <p>&copy; Country Creations. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
